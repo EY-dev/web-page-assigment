@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--suppress HtmlDeprecatedAttribute -->
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="main.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+    <title>Internet and World Wide Web HomeWork Project</title>
+</head>
+<body background="img/background.jpg">
+    <div class="window" id="window">
+        <div name="header">
+            <div name="topic" class="topic">
+                <h1>Homework of week 8 for Internet and World Wide Web class</h1>
+            </div>
+            <div style="text-align: center">
+                <div class="logo"><a href="https://www.java.com/" target="_blank" title="Java">
+                    <img alt="Java" src="img/java-logo.png" style="width: 100%; height: 100%;">
+                </a></div>
+                <div class="logo"><a href="https://www.php.net/" target="_blank" title="PHP">
+                    <img alt="php"  src="img/php_logo.png"  style="width: 100%; height: 100%;">
+                </a></div>
+                <div class="logo"><a href="https://www.javascript.com/" target="_blank" title="JavaScript">
+                    <img alt="JavaScript"  src="img/javascript-logo.png" style="width: 70%; height: 70%; margin-bottom: 20px;">
+                </a></div>
+                <div class="logo"><a href="https://www.jquery.com/" target="_blank" title="JQuery">
+                    <img alt="jquery"  src="img/jquery-logo.png"  style="width: 70%; height: 70%; margin-bottom: 20px;">
+                </a></div>
+                <div class="logo"><a href="https://en.wikipedia.org/wiki/HTML" target="_blank" title="HTML">
+                    <img alt="html"  src="img/html-logo.png"  style="width: 70%; height: 70%; margin-bottom: 20px;">
+                </a></div>
+            </div>
+            <div name="author" class="author" style="margin-top: 50px">
+                <h2>Performance of
+                    <a style="color: burlywood" href="https://www.linkedin.com/in/evgenii-esaulov-3252aa128/" target="_blank" title="LinkedIn account">
+                        Evgenii Eugene Esaulov
+                    </a>
+                </h2>
+            </div>
+        </div>
+        <div id="app" name="body">
+            <div name="introduction" class="rowOfTable" v-on:click="isVisibleBlock1=true, isVisibleBlock2=false, isVisibleBlock3=false">
+                <div style="margin-right: 7px; float: right"><img id="block1IMG" src="img/expand.png" class="expandIMG" style="transform: rotate(360deg)" alt=""></div>
+                <div class="textOfRow">A couple words about me</div>
+            </div>
+            <div class="hiddenSource" v-show="isVisibleBlock1" id="block1" name="introSource" >
+                <div name="hiddenSourceText" class="hiddenSourceText" >
+                    My American name is Eugene. I am 31 years old developer from Russia. In my country, I obtained a bachelor’s degree in IT realm.
+                    I had been working as a programmer (application development and web development) for 8 years. In 2018, I decided to follow my dream
+                    to live in the USA. Sine that time, I finished ESL classes in Denver Colorado, and entered to Chemeketa Community College in Salem Oregon
+                </div>
+            </div>
+
+            <div class="rowOfTable" name="mySkills" v-on:click="isVisibleBlock1 = false; isVisibleBlock2 = true; isVisibleBlock3 = false">
+                <div style="margin-right: 7px; float: right"><img id="block2IMG" src="img/expand.png" class="expandIMG" alt=""></div>
+                <div class="textOfRow">My Skills</div>
+            </div>
+            <div class="hiddenSource" v-show="isVisibleBlock2" id="block2" name="skillsSource" >
+                <div name="hiddenSourceText" class="hiddenSourceText">
+                    <h3 style="margin-top: -5px">Languages</h3>
+                    <li> I had experience with: C#, Java, Microsoft Visual Basic Application, JavaScript, PHP</li>
+                    <h3>Software</h3>
+                    <li> Database: Microsoft SQL Server, MySQL, Microsoft Access</li>
+                    <li> Office: Microsoft Word, Microsoft Excel</li>
+                    <li> IDE: JetBrains - IntelliJ IDEA, PHP Storm, Android Studio; Microsoft Visual Studio.</li>
+                    <li> CAD/CAM: KOMPAS 3D</li>
+                    <li> Platforms: Microsoft Windows and Android</li>
+                </div>
+            </div>
+
+            <div name="myHobbies" class="rowOfTable" v-on:click="isVisibleBlock1 = false; isVisibleBlock2 = false; isVisibleBlock3 = true">
+                <div style="margin-right: 7px; float: right"><img class="expandIMG" id="block3IMG" src="img/expand.png"
+                                                                  width="512" height="512" alt=""></div>
+                <div class="textOfRow">My Hobbies</div>
+            </div>
+            <div class="hiddenSource" v-if="isVisibleBlock3" id="block3" name="hobbiesSource" >
+                <div name="hiddenSourceText" class="hiddenSourceText">
+                    <ul>
+                        <li><b>Science:</b> Math, Physics, Astrophysics, Quantum Mechanics</li>
+                        <li><b>Sport:</b> Volleyball, Golf</li>
+                        <li><b>DIY:</b> Working with Arduino or similar embedded systems</li>
+                        <li><b>Favorite language:</b> Java</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="height: 10px"></div>
+    </div>
+</body>
+</html>
